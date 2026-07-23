@@ -84,25 +84,28 @@ class ProfileItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            width: 90,
-            height: 90,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.deepPurple.shade50,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.deepPurple.withOpacity(0.2),
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Icon(
-              icon,
-              size: 40,
-              color: Colors.deepPurple,
-            ),
-          ),
+         width: 90,
+         height: 90,
+         decoration: BoxDecoration(
+         shape: BoxShape.circle,
+         gradient: LinearGradient(
+         colors: [Colors.deepPurple.shade100, Colors.deepPurple.shade200],
+    ),
+    border: Border.all(color: Colors.deepPurple.shade300, width: 2),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.deepPurple.withOpacity(0.25),
+        blurRadius: 12,
+        offset: const Offset(0, 5),
+      ),
+    ],
+  ),
+  child: Icon(
+    icon,
+    size: 40,
+    color: Colors.deepPurple,
+  ),
+),
           const SizedBox(height: 16),
           Text(
             label,
