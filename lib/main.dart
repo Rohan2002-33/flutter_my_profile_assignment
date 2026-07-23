@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Profile',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        scaffoldBackgroundColor: Colors.white,
+        primarySwatch: Colors.amber,
+        scaffoldBackgroundColor: const Color(0xFFFFF7FF),
       ),
       home: const ProfileScreen(),
     );
@@ -29,8 +29,8 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Profile'),
-        backgroundColor: Colors.deepPurple.shade100,
-        foregroundColor: Colors.black87,
+        backgroundColor: const Color(0xFFFFC107),
+        foregroundColor: const Color(0xFF3D3D3D),
         elevation: 0,
         actions: [
           IconButton(
@@ -47,20 +47,22 @@ class ProfileScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            ProfileItem(
-              icon: Icons.icecream,
-              label: 'Ice cream is very delicious right?',
-            ),
-            SizedBox(height: 40),
-            ProfileItem(
-              icon: Icons.code,
-              label: 'Programming is not boring if you love it',
-            ),
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: const [
+              ProfileItem(
+                icon: Icons.icecream_outlined,
+                label: 'Ice cream is very delicious right?',
+              ),
+              SizedBox(height: 36),
+              ProfileItem(
+                icon: Icons.code,
+                label: 'Programming is not boring if you love it',
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -84,35 +86,26 @@ class ProfileItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
-         width: 90,
-         height: 90,
-         decoration: BoxDecoration(
-         shape: BoxShape.circle,
-         gradient: LinearGradient(
-         colors: [Colors.deepPurple.shade100, Colors.deepPurple.shade200],
-    ),
-    border: Border.all(color: Colors.deepPurple.shade300, width: 2),
-    boxShadow: [
-      BoxShadow(
-        color: Colors.deepPurple.withOpacity(0.25),
-        blurRadius: 12,
-        offset: const Offset(0, 5),
-      ),
-    ],
-  ),
-  child: Icon(
-    icon,
-    size: 40,
-    color: Colors.deepPurple,
-  ),
-),
-          const SizedBox(height: 16),
+            width: 136,
+            height: 136,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Color(0xFFE8D9FF),
+            ),
+            child: Icon(
+              icon,
+              size: 56,
+              color: Color(0xFF26006B),
+            ),
+          ),
+          const SizedBox(height: 9),
           Text(
             label,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF29242C),
             ),
           ),
         ],
