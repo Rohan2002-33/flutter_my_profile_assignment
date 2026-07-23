@@ -1,17 +1,25 @@
-# my_profile
+# My Profile — Flutter Assignment (Module 5)
 
-A new Flutter project.
+A simple Flutter UI screen built as part of Ostad's Module 5 assignment, demonstrating:
+- `Scaffold` and `AppBar` with action icons
+- `Column`, `Padding`, `SizedBox`, `Center` for layout
+- `CircleAvatar`-style containers with `BoxDecoration` (gradient, border, shadow)
+- Custom icons via `Icon` widget
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
+![My Profile Screen](screenshots/profile_screenshot.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- AppBar titled "My Profile" with add, settings, and phone icons
+- Two styled circular icon sections:
+  - Ice cream icon — "Ice cream is very delicious right?"
+  - Code icon — "Programming is not boring if you love it"
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to run
+
+\`\`\`
+flutter pub get
+flutter run
+\`\`\`
